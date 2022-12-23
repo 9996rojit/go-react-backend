@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Permission struct {
 	Base
-	Name string `json:"permission_name"`
+	Name string `gorm:""json:"permission_name"`
 }
 
 func GetPermissions() []Permission {

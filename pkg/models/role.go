@@ -6,7 +6,7 @@ import "github.com/9996rojit/backend_go/pkg/config"
 
 type Role struct {
 	Base
-	Name         string `json:"role_name"`
+	Name         string `gorm:""json:"role_name"`
 	PermissionId string
 	Permission   Permission `gorm:"foreignKey:PermissionId"`
 }

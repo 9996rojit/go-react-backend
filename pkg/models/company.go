@@ -2,7 +2,7 @@ package models
 
 type Company struct {
 	Base
-	Name    string `json:"company_name"`
+	Name    string `gorm:""json:"company_name"`
 	Address string `json:"company_address"`
 	Contact string `json:"company_contact"`
 	Email   string `json:"company_email"`
