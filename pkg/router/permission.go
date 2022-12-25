@@ -9,5 +9,5 @@ var HandelPermissionRoute = func(router *mux.Router) {
 	router.HandleFunc("/permission", controllers.CreatePermission).Methods("POST")
 	router.HandleFunc("/getPermissionById/{permissionId}", controllers.GetPermissionById).Methods("GET")
 	router.HandleFunc("/getPermission", controllers.GetAllPermission).Methods("GET")
-	// router.HandleFunc("/DeletePermission", controllers.DeletePermission).Methods("DELETE")
+	router.HandleFunc("/deletePermission/{permissionId}", controllers.DeletePermissionById).Methods("DELETE")
 }

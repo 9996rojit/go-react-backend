@@ -12,5 +12,7 @@ func main() {
 	r := mux.NewRouter()
 	router.HandleAuth(r)
 	router.HandelPermissionRoute(r)
+	router.RoleRouter(r)
+	router.CompanyRoutes(r)
 	log.Fatal(http.ListenAndServe("localhost:9910", r))
 }

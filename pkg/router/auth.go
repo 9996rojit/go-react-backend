@@ -7,7 +7,7 @@ import (
 
 var HandleAuth = func(r *mux.Router) {
 	// r.HandleFunc("/", controllers.HandleHome).Methods("GET")
-	// 	r.HandleFunc("/login", controllers.HandleLogin).Methods("POST")
+	r.HandleFunc("/login", controllers.HandleLogin).Methods("POST")
 	r.HandleFunc("/register", controllers.HandleRegister).Methods("POST")
 	//		r.HandleFunc("/forget-password", controllers.HandleForgetPassword).Methods("POST")
 	//		r.HandleFunc("/change-password", controllers.HandleChangePassword).Methods("POST")
