@@ -14,5 +14,6 @@ func main() {
 	router.HandelPermissionRoute(r)
 	router.RoleRouter(r)
 	router.CompanyRoutes(r)
+	router.ProductRoutes(r)
 	log.Fatal(http.ListenAndServe("localhost:9910", r))
 }

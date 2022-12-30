@@ -4,7 +4,6 @@ type Product struct {
 	Base
 	Name         string  `json:"product_name"`
 	Price        float64 `json:"product_price"`
-	Image        []ProductImage
 	Category     string  `json:"product_category"`
 	SubCategory  string  `json:"product_subcategory"`
 	Description  string  `json:"product_description"`
@@ -13,10 +12,6 @@ type Product struct {
 	UnitsInStock float64 `json:"product_units_in_stock"`
 	UnitsOnOrder float64 `json:"product_units_on_order"`
 	CompanyId    string  `json:"product_company_id"`
-}
-
-func init() {
-	db.AutoMigrate(&Product{})
 }
 
 func (p *Product) CreateProduct() *Product {

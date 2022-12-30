@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"github.com/9996rojit/backend_go/pkg/models"
@@ -12,8 +13,8 @@ var PermissionModel models.Permission
 
 func CreatePermission(w http.ResponseWriter, r *http.Request) {
 	permissionBody := &models.Permission{}
-	// utils.BodyParser(r, permissionBody)
 	json.NewDecoder(r.Body).Decode(permissionBody)
+	fmt.Println("This is request body:%w", permissionBody)
 	per := permissionBody.CreatePermisssion()
 	res, err := json.Marshal(per)
 	if err != nil {

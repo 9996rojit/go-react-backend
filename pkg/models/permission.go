@@ -14,7 +14,7 @@ func GetPermissions() []Permission {
 }
 
 func (p *Permission) CreatePermisssion() *Permission {
-	db.Create(&p)
+	db.Model(&Permission{}).Create(&p)
 	return p
 }
 

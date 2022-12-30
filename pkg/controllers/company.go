@@ -10,6 +10,7 @@ import (
 
 func CreateCompany(w http.ResponseWriter, r *http.Request) {
 	company := &models.Company{}
+	json.NewDecoder(r.Body).Decode(company)
 	CompanyRes := company.CreateCompany()
 
 	res, err := json.Marshal(CompanyRes)

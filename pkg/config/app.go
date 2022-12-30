@@ -18,7 +18,7 @@ func Connect() {
 		panic(err)
 	}
 	db = d
-	fmt.Printf("this is database connection test in go lang is \n %v \n", d)
+	fmt.Printf("this is database connection test in go lang is \n %w \n", d)
 }
 
 func GetDb() *gorm.DB {

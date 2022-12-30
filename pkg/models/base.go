@@ -16,6 +16,6 @@ type Base struct {
 
 func (base *Base) BeforeCreate(tx *gorm.DB) (err error) {
 	uuid := uuid.NewV4().String()
-	tx.Statement.SetColumn("ID", uuid)
+	tx.Statement.SetColumn("Id", uuid)
 	return nil
 }

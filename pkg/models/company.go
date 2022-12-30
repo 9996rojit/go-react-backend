@@ -7,11 +7,6 @@ type Company struct {
 	Contact string `json:"company_contact"`
 	Email   string `json:"company_email" gorm:"unique"`
 	Type    string `json:"company_type"`
-	User    []User `gorm:"foreignKey:UserID"`
-}
-
-func init() {
-	db.AutoMigrate(&Company{})
 }
 
 func (c *Company) CreateCompany() *Company {

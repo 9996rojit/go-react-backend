@@ -12,7 +12,7 @@ var db *gorm.DB
 
 type User struct {
 	Base
-	RoleId    string
+	RoleId    string `json:"role_id"`
 	Password  string `json:"password"`
 	Name      string `json:"user_name"`
 	Email     string `gorm:"unique" json:"user_email"`
@@ -26,7 +26,7 @@ type User struct {
 func init() {
 	config.Connect()
 	db = config.GetDb()
-	db.AutoMigrate(&User{})
+	db.AutoMigrate(&User{}, &Company{}, &Product{}, &ProductImage{}, &Role{})
 }
 
 func (u *User) BeforeSave(tx *gorm.DB) (err error) {

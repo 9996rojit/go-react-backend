@@ -6,7 +6,7 @@ import (
 )
 
 var CompanyRoutes = func(r *mux.Router) {
-	r.HandleFunc("/companies", controllers.CreateCompany).Methods("POST")
+	r.HandleFunc("/company", controllers.CreateCompany).Methods("POST")
 	// r.HandleFunc("/companies/{companyID}", controllers.companyHandler).Methods("GET")
 	// r.HandleFunc("/companies/{companyId}", controllers.companyHandler).Methods("PUT")
 

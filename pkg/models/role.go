@@ -1,20 +1,20 @@
 package models
 
-import "github.com/9996rojit/backend_go/pkg/config"
+// import "github.com/9996rojit/backend_go/pkg/config"
 
 // import "gorm.io/gorm"
 
 type Role struct {
 	Base
 	Name         string `json:"role_name"`
-	PermissionId string
+	PermissionId string `json:"permission_id"`
 }
 
-func init() {
-	config.Connect()
-	db = config.GetDb()
-
-}
+// func init() {
+// 	config.Connect()
+// 	db = config.GetDb()
+//
+// }
 
 func GetRole() []Role {
 	var role []Role
